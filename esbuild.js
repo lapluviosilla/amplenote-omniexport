@@ -6,7 +6,7 @@ import pluginConfig from "./plugin.config.js";
 
 dotenv.config();
 
-const README_FILE = path.resolve("PLUGIN_README.md");
+const README_FILE = path.resolve("README.md");
 
 /**
  * Escapes Markdown special characters in a string to prevent formatting issues.

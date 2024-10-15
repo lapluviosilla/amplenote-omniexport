@@ -3,9 +3,9 @@
  * setting is an array of all your Settings, but you can remove the key if your plugin doesn't have any settings.
  */
 export default {
-  name: "Your Plugin Name",
-  description: "A plugin to ... (add description here)",
-  icon: "extension",
+  name: "Exporter",
+  description: "A plugin to export your notes in other formats",
+  icon: "export_notes",
   version: "1.0.0",
   sourceRepo: "https://github.com/acct/repo", // This is optional and can be removed
   instructions: `![](https://linktoimage)
