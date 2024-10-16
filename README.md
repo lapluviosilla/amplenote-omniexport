@@ -1,4 +1,4 @@
-# Your Cool Amplenote Plugin Name
+# Amplenote Exporter
 
 In this section you can provide some details about the [Amplenote plugin](https://www.amplenote.com/help/developing_amplenote_plugins)
 that this repo will implement.
@@ -15,7 +15,7 @@ In this section you can give any usage instructions
 
 Any information about you
 
-**Published by**: your user
+**Published by**: lapluviosilla
 
 **Date**: publish date
 

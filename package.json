@@ -1,8 +1,13 @@
 {
   "dependencies": {
     "dotenv": "^16.0.3",
+    "epub.js": "^0.2.15",
     "esbuild": "0.17.15",
-    "isomorphic-fetch": "^3.0.0"
+    "file-saver": "^2.0.5",
+    "html-docx-js": "^0.3.1",
+    "isomorphic-fetch": "^3.0.0",
+    "jspdf": "^2.5.2",
+    "markdown-it": "^14.1.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.0",
