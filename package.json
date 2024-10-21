@@ -22,6 +22,7 @@
   "name": "plugin-template",
   "scripts": {
     "build": "node esbuild.js",
+    "bc": "node esbuild.js && cat build/plugin.md | pbcopy",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "testEnvironment": "jsdom",
