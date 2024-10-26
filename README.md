@@ -1,11 +1,18 @@
-# Amplenote Exporter
+# OmniExport for Amplenote Plugin
 
-In this section you can provide some details about the [Amplenote plugin](https://www.amplenote.com/help/developing_amplenote_plugins)
-that this repo will implement.
+A plugin that enables you to export your notes in a variety of formats.
 
 ## **Features**
 
-In this section you can elaborate on the features
+- **Supported Formats**: PDF, Word, ePub, LaTeX, CSV, Markdown
+
+- **Bulk Export**: You can export your notes across different tags, name queries or even your whole notebook.
+
+  - _Warning_: This feature works best on the desktop app because the export can be streamed. On browsers it has to load all the exports into memory before downloading them, which could crash Amplenote. I am currently working with the Amplenote team to try and get the necessary plugin api support to make this work efficiently across all platforms.
+
+- **Table Export**: You ever just want to export a single table as CSV? With this plugin you can select the table and do just that.
+
+- **Lazy Loaded Dependencies**: The plugin only loads the external libraries on demand so no need to worry about plugin bloat here.
 
 ## **Usage**
 

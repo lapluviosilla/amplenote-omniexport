@@ -1,0 +1,188 @@
+<style>
+  /* Define CSS variables for light and dark themes */
+  :root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --progress-bar-bg: #e0e0e0;
+    --progress-bar-fill: #4caf50;
+    --log-bg: #f9f9f9;
+    --log-border: #ddd;
+    --delete-button-bg: #ff4d4d;
+    --cancel-button-bg: #ff9800;
+  }
+
+  /* Override variables for dark mode */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #1e1e1e;
+      --text-color: #f1f1f1;
+      --progress-bar-bg: #3a3a3a;
+      --progress-bar-fill: #81c784;
+      --log-bg: #2e2e2e;
+      --log-border: #555555;
+      --delete-button-bg: #e57373;
+      --cancel-button-bg: #ffb74d;
+    }
+  }
+
+  /* Apply the variables */
+  .export-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .export-header {
+    text-align: center;
+  }
+  .progress-bar-container {
+    background-color: var(--progress-bar-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 30px;
+    margin-bottom: 15px;
+  }
+  .progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: var(--progress-bar-fill);
+    transition: width 0.5s, background-color 0.3s;
+  }
+  .progress-text {
+    text-align: center;
+    margin-top: 5px;
+  }
+  .log-container {
+    height: 200px;
+    overflow-y: auto;
+    background-color: var(--log-bg);
+    padding: 10px;
+    border: 1px solid var(--log-border);
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  .delete-button, .cancel-button {
+    display: none;
+    padding: 10px 20px;
+    margin: 5px 3px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .delete-button {
+    background-color: var(--delete-button-bg);
+    margin-right: 10px;
+  }
+  .cancel-button {
+    background-color: var(--cancel-button-bg);
+  }
+  /* Show buttons when needed */
+  .show {
+    display: inline-block;
+  }
+</style>
+
+<div class="export-container">
+  <h2 class="export-header">Exporting...</h2>
+  
+  <!-- Progress Bar -->
+  <div class="progress-bar-container">
+    <div id="progressBar" class="progress-bar"></div>
+  </div>
+  <p id="progressText">0/0 notes exported</p>
+  
+  <!-- Log -->
+  <div id="logContainer" class="log-container">
+    <p>Starting export...</p>
+  </div>
+  
+  <!-- Delete Button -->
+  <button id="deleteButton" class="delete-button">Delete Note</button>
+  <button id="logButton" class="cancel-button">Save Log</button>
+  
+  <!-- Embed JavaScript -->
+  <!-- Embed JavaScript -->
+  <script type="text/javascript">
+    /**
+     * Updates the progress bar and progress text.
+     * 
+     * @param {number} progress - Progress percentage.
+     * @param {number} completed - Number of notes exported.
+     * @param {number} total - Total number of notes to export.
+     */
+    function updateProgress(completed, total) {
+      const progressBar = document.getElementById('progressBar');
+      const progressText = document.getElementById('progressText');
+      const progress = Math.round((completed / total) * 100);
+
+      progressBar.style.width = progress + '%';
+      progressText.innerText = completed + '/' + total + ' notes exported';
+    }
+
+    /**
+     * Appends new logs to the log container.
+     * 
+     * @param {Array} newLogs - Array of new log messages.
+     */
+    function appendLogs(newLogs) {
+      const logContainer = document.getElementById('logContainer');
+      newLogs.forEach(log => {
+        const p = document.createElement('p');
+        p.innerText = log;
+        logContainer.appendChild(p);
+        logContainer.scrollTop = logContainer.scrollHeight; // Auto-scroll to bottom
+      });
+    }
+
+    /**
+     * Shows the delete button.
+     */
+    function showDeleteButton() {
+      const deleteButton = document.getElementById('deleteButton');
+      deleteButton.style.display = 'inline-block';
+      const logButton = document.getElementById('logButton');
+      logButton.style.display = 'inline-block';
+    }
+
+    /**
+     * Polls the plugin for progress and new logs.
+     */
+    function pollPlugin() {
+      window.callAmplenotePlugin().then(data => {
+        const completed = data.completed;
+        const total = data.total;
+        const newLogs = data.logs;
+        const progress = Math.round((completed/total) * 100);
+
+        updateProgress(completed, total);
+        if (newLogs && newLogs.length > 0) {
+          appendLogs(newLogs);
+        }
+
+        if (progress < 100) {
+          setTimeout(pollPlugin, 200); // Poll every 200ms
+        } else {
+          showDeleteButton();
+        }
+      }).catch(error => {
+        console.error("Error polling plugin:", error);
+      });
+    }
+
+    /**
+     * Handles the deletion of the temporary note.
+     */
+    document.getElementById('deleteButton').addEventListener('click', function() {
+      window.callAmplenotePlugin('deleteNote');
+    });
+    document.getElementById('logButton').addEventListener('click', function() {
+      window.callAmplenotePlugin('saveLog');
+    });
+
+    // Initiate Polling
+    pollPlugin();
+  </script>
+</div>

@@ -193,6 +193,7 @@ async function buildAndGenerateMarkdown() {
     platform: "browser",
     loader: {
       ".css": "text",
+      ".html": "text",
       ".png": "dataurl",
     },
     plugins: [amplenoteifyPlugin],

@@ -4,7 +4,7 @@
  */
 export default {
   name: "Exporter",
-  description: "A plugin to export your notes in other formats",
+  description: "A plugin that enables you to export your notes in a variety of formats.",
   icon: "output",
   version: "1.0.0",
   sourceRepo: "https://github.com/acct/repo", // This is optional and can be removed
