@@ -7,7 +7,7 @@ export default {
   description: "A plugin that enables you to export your notes in a variety of formats.",
   icon: "output",
   version: "1.0.0",
-  sourceRepo: "https://github.com/acct/repo", // This is optional and can be removed
+  sourceRepo: "https://github.com/lapluviosilla/amplenote-omniexport", // This is optional and can be removed
   instructions: `
 Put any instructions **here**`,
   setting: [],
