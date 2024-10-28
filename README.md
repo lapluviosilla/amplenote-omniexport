@@ -28,6 +28,8 @@ In this section you can give any usage instructions
 
 ## **Roadmap**
 
+- Attachment Support
+
 - More export customization options, styling and fonts.
 
 - More bulk export query options
