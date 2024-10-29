@@ -21,5 +21,8 @@ export default {
 - **Table Export**: You ever just want to export a single table as CSV? With this plugin you can select a part of your note containing a table and do just that.
 
 - **Lazy Loaded Dependencies**: The plugin only loads the external libraries on demand so no need to worry about plugin bloat here.`,
-  setting: [],
+  setting: [
+    "Export Tag",
+    "Keep Export Tag after Export? (set to true to disable removal of the tag)",
+  ],
 };
