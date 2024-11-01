@@ -8,7 +8,7 @@ A plugin that enables you to export your notes in a variety of formats.
 
   - **ePub**: Includes custom cover with note title. You can also bulk export your notes as a single epub book.
 
-- **Bulk Export**: You can export your notes across different tags, name queries or even your whole notebook.
+- **Bulk Export**: You can export your notes across different tags, name queries or even your whole notebook. Exports Images and Attachments!
 
   - _Warning_: This feature works best on the desktop app because the export can be streamed. On browsers it has to load all the exports into memory before downloading them, which could crash Amplenote. I am currently working with the Amplenote team to try and get the necessary plugin api support to make this work efficiently across all platforms.
 
@@ -48,7 +48,7 @@ A plugin that enables you to export your notes in a variety of formats.
 
 ## **Roadmap**
 
-- Attachment Support
+- Export as Single PDF
 
 - More export customization options, styling and fonts.
 
