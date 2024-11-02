@@ -4,7 +4,7 @@ A plugin that enables you to export your notes in a variety of formats.
 
 ## **Features**
 
-- **Supported Formats**: PDF, Word, ePub, LaTeX, CSV, Markdown
+- **Supported Formats**: PDF, Word, ePub, Single File ePub, LaTeX, CSV, Markdown
 
   - **ePub**: Includes custom cover with note title. You can also bulk export your notes as a single epub book.
 
@@ -30,7 +30,9 @@ A plugin that enables you to export your notes in a variety of formats.
 
   - The wizard also includes a shortcut button to export every note tagged with "export"
 
-  - _Note:_ Mac OSX Archive Utility is very bug prone and sometimes refuses to open certain zip exports very randomly. Please use a different archive utility if you get a "It is in an unsupported format" error. This is NOT an issue with the plugin or zip creation.
+  - Choose whether to export attachments or not.
+
+  - _Note:_ Mac OSX Archive Utility is very bug prone and sometimes refuses to open certain zip exports very randomly, especially epub exports. Please use a different archive utility if you get a "It is in an unsupported format" error. This is NOT an issue with the plugin or zip creation.
 
 - **Export By Temporary Export Tag**
 
@@ -44,7 +46,7 @@ A plugin that enables you to export your notes in a variety of formats.
 
 - **Export As**
 
-  - From the Note Menu you can export in to all the supported formats. This does not currently support exporting attachments, for that you have to use the bulk exporter.
+  - From the Note Menu you can export in to all the supported formats. This does not currently export attachments, for that you have to use the bulk exporter.
 
 - **Table Export**: _Note_: Because of Amplenotes interface you must select a text block that contains a table to do a table export. If you just select the table itself it won't give you the plugin menu.
 
@@ -62,13 +64,13 @@ A plugin that enables you to export your notes in a variety of formats.
 
 ## **Author**
 
-Any information about you
+Check out my other amplenote plugin! [Dynamic Templater](https://www.amplenote.com/plugins/SjZGNPZBvRq42xpfD6u8CbHT)
 
 **Published by**: lapluviosilla
 
-**Date**: publish date
+**Date**: November 1st, 2024
 
-**Last Updated**: last update date
+**Last Updated**: November 1st, 2024
 
 ## **Feedback**
 

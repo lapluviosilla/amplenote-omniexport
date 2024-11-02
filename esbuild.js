@@ -199,6 +199,7 @@ async function buildAndGenerateMarkdown() {
     plugins: [amplenoteifyPlugin],
     minify: false,
     write: true,
+    legalComments: "inline",
   });
 
   console.log(`Build completed for ${outfile}`);
@@ -213,6 +214,7 @@ async function buildAndGenerateMarkdown() {
   const minifiedResult = await esbuild.transform(compiledCode, {
     minify: true,
     loader: "js",
+    legalComments: "inline",
   });
 
   // Remove the final semicolon from the minified code to make it acceptable by amplenote
