@@ -10,6 +10,11 @@ export default {
   sourceRepo: "https://github.com/lapluviosilla/amplenote-omniexport", // This is optional and can be removed
   instructions: `Use the Cmd/Ctrl-O Bulk Export menu to open the bulk export wizard. Use the Note option menu to export as various formats.
 View the [README on Github](https://github.com/lapluviosilla/amplenote-omniexport/blob/main/README.md) for detailed usage instructions
+
+**Watch the** [**Overview Video**](https://youtu.be/V3GB9fF98VI)
+
+<br/>☕ If the plugin is helpful to you, you can [buy me a coffee](https://ko-fi.com/lapluviosilla)!
+
 - **Supported Formats**: PDF, Word, ePub, Single File ePub, LaTeX, CSV, Markdown
 
   - **ePub**: Includes custom cover with note title. You can also bulk export your notes as a single epub book.

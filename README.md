@@ -2,6 +2,8 @@
 
 A plugin that enables you to export your notes in a variety of formats.
 
+**Watch the** [**Overview Video**](https://youtu.be/V3GB9fF98VI)
+
 ## **Features**
 
 - **Supported Formats**: PDF, Word, ePub, Single File ePub, LaTeX, CSV, Markdown
@@ -64,13 +66,15 @@ A plugin that enables you to export your notes in a variety of formats.
 
 ## **Author**
 
-Check out my other amplenote plugin! [Dynamic Templater](https://www.amplenote.com/plugins/SjZGNPZBvRq42xpfD6u8CbHT)
+☕ If the plugin is helpful to you, you can [buy me a coffee](https://ko-fi.com/lapluviosilla)!
+
+<br/>Check out my other amplenote plugin! [Dynamic Templater](https://www.amplenote.com/plugins/SjZGNPZBvRq42xpfD6u8CbHT)
 
 **Published by**: lapluviosilla
 
-**Date**: November 1st, 2024
+**Date**: November 2nd, 2024
 
-**Last Updated**: November 1st, 2024
+**Last Updated**: November 2nd, 2024
 
 ## **Feedback**
 
